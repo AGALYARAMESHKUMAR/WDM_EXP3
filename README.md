@@ -131,5 +131,5 @@ visualize_patterns_line(party_wear_result, 'Party Wear')
 ```
 ### Output:
 
-
+ 
 ### Result:
