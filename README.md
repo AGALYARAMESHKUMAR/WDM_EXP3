@@ -33,8 +33,6 @@ Procedure:
 Program:
 from collections import defaultdict
 from itertools import combinations
-
-# Function to generate candidate k-item sequences
 def generate_candidates(dataset, k, min_support):
     candidates = defaultdict(int)
     for seq in dataset:
@@ -42,7 +40,6 @@ def generate_candidates(dataset, k, min_support):
             candidates[comb] += 1
     return {item: support for item, support in candidates.items() if support >= min_support}
 
-# Function to perform GSP algorithm
 def gsp(dataset, min_support):
     frequent_patterns = defaultdict(int)  # Corrected variable name
     k = 1
@@ -56,7 +53,6 @@ def gsp(dataset, min_support):
 
     return frequent_patterns
 
-# Example dataset for each category
 top_wear_data = [
     ["blouse", "t-shirt", "tank_top"],
     ["hoodie", "sweater", "top"],
@@ -82,15 +78,12 @@ party_wear_data = [
     # Add more sequences for party wear
 ]
 
-# Minimum support threshold
 min_support = 2
 
-# Perform GSP algorithm for each category
 top_wear_result = gsp(top_wear_data, min_support)
 bottom_wear_result = gsp(bottom_wear_data, min_support)
 party_wear_result = gsp(party_wear_data, min_support)
 
-# Output the frequent sequential patterns for each category
 print("Frequent Sequential Patterns - Top Wear:")
 if top_wear_result:
     for pattern, support in top_wear_result.items():
@@ -115,11 +108,10 @@ else:
 # Output:
 ![image1](https://github.com/user-attachments/assets/8c831b22-fb9e-49fb-94b0-2a73d586468f)
 
-# Visualization:
+Visualization:
 
 import matplotlib.pyplot as plt
 
-# Function to visualize frequent sequential patterns with a line plot
 def visualize_patterns_line(result, category):
     if result:
         patterns = list(result.keys())
@@ -136,7 +128,6 @@ def visualize_patterns_line(result, category):
     else:
         print(f"No frequent sequential patterns found in {category}.")
 
-# Visualize frequent sequential patterns for each category using a line plot
 visualize_patterns_line(top_wear_result, 'Top Wear')
 visualize_patterns_line(bottom_wear_result, 'Bottom Wear')
 visualize_patterns_line(party_wear_result, 'Party Wear')
