@@ -9,7 +9,7 @@ Steps:
    1. Database Scanning: GSP scans the sequence database to determine the support of each item in the dataset.
    2. Candidate Generation: It generates a set of candidate sequences using frequent items found in the previous step.
    3. Pattern Growth: It extends the candidate sequences by merging them to form longer patterns, checking their support against a user-defined minimum support threshold.
-   4. Repeat: The process continues until no new sequences meet the minimum support threshold.
+   4. Repeat: The process continues until no new sequences meet the minimum support threshold. 
 
 GSP finds application in various domains such as market basket analysis, web usage mining, bioinformatics, and more. For instance, in retail, GSP can identify common purchasing patterns, helping businesses understand customer behavior for targeted marketing or inventory management.
 
