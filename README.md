@@ -13,7 +13,7 @@ Steps:
 
 GSP finds application in various domains such as market basket analysis, web usage mining, bioinformatics, and more. For instance, in retail, GSP can identify common purchasing patterns, helping businesses understand customer behavior for targeted marketing or inventory management.
 
-Procedure:
+# Procedure:
 
 1. From collections import defaultdict, from itertools import combinations: Imports necessary libraries/modules. defaultdict is used to create a dictionary with default values and combinations generates all possible combinations of a sequence.
 
@@ -30,7 +30,7 @@ Procedure:
 7. Output the frequent sequential patterns for each category: Prints the frequent sequential patterns along with their support counts for each wear category.
 
 8. Visulaize the sequence patterns using matplotlib.
-Program:
+# Program:
 ```from collections import defaultdict
 from itertools import combinations
 # Function to generate candidate k-item sequences
@@ -116,7 +116,7 @@ else:
 # Output:
 ![image1](https://github.com/user-attachments/assets/8c831b22-fb9e-49fb-94b0-2a73d586468f)
 
-Visualization:
+# Visualization:
 ```
 import matplotlib.pyplot as plt
 
